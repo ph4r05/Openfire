@@ -5,7 +5,7 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "Iq81+8Qeh2jUawwC59Qi5KjoHVhRIQSsNOa+68lKFE1oze61/eBpjFBENIy/oiGZdC+zR8EC6t0P8nrRL8Z3f7gvG1sx511oO5Aazhzf+CgB1PWOI9IHjuLTBwOy9XIKHLvqNlSTW3BuaMz0iVbGMJwZ3IyZXxZAZK3KLb/hGmHuUwGUXO3h+3zpGYaHS/2Yg7IKrIUcHH7Tn3rDrIVt/8mshjj9UCe2+a5sjRHWxV2PKLxoexGboTMVtSQajYAS0VgZy4OKMd2hphx4v/B7VCmUUa+htvywuASUOyKGSDFRi6hG28rbMtvfV6h65wjizkpKqBjP9YHMKE3Q5MigDDzp2owzQJsZ1QjYOHn2r7G0wkEp4UWIMomF8+xTYAyKku1byNT4xqfQBGtEAvAkrt6vF1asb63FIRPiV+KX/rMZg2XdX6kr8d5KivAWUeKeJFGTXzqGCm/79djBbfM2BrhHP3D1yuDUEIVNFgChgr6tHfUOUyJ9dr784gb+bAEmaYHufSaJdtDXlNLIPmCE49vP+gHeOy2L8pFcy/maZHHAk4L7ilQac7HSvjuGJdA+iKj40e4ZGHI72iUayDZRdAm3xiDvrqphfI3o1ySBbRfF2Q/QfmaY9GUhO7Hb2fmaM7i3Yp+tSbQeRUAxFVpE2mFO+sy/YbAbP17ZIs0fPQA="
+   - secure: "fSlkzUugexEb9f0TGN3EwWnJLBQSNtBan4D/ABFRFDAofm/NGxTq6wVzW6DnVmcrdqivmMh5gZprCaCutGXihmr+xWgFWeAb/DmFjD+uT70a3qSFYrD3x6m6RdxAQiYfo1+qMsRGoumf6OGt2SGucv2IOxrmbkIz47EAC1INrCSzfvrIxLNCzRrk8vP/1rWxSMjksC9+RUIWBdDiWcI3m81W7Nz+NLPRBMGbEX/MF6ZvB7CSIWGCNGK/GZ+/Z3C6iG0NqJeSDIKqfiPPzYZgiMp+8COZNI5wWxenOgOYVR9dbA12Ms98S/I7W07kYbY+KQrcp3lVPBJIleTkS/Wg/nupyUo+e2Kn3VtR3CfXsHoERdL3Qh7lnS/oYrkPrLTpzk4tbJNdyLyATLs3rIeiDr8ljwf+0RPLsl0TnqvqXRkvrqt53UBq0/se8J+ujg/LpXss+xRXfaryiAwPUr29+OGxPrVDq01iFsHV4pj6mDZOIdTSbSjbWgC9gtg4imMaFFGOnOp3rKfaULMuhJDvtmM+KYto27AjDUaqIWk8eLS7e7ThoqHabg3J8sbI5cPjamSQuk3fZlLlGFetCRn5uiLLpZ/NT2H1uWTk/0zKBN/COiLa8gA37WDSif2DizvAxpwaBC+TjcXdBTuno79j6oF7OCkh5Xlg562QWGgauHw="
 
 addons:
   coverity_scan:
@@ -16,3 +16,4 @@ addons:
     build_command_prepend: ant -f build/build.xml clean
     build_command:   ant -f build/build.xml openfire plugins
     branch_pattern: coverity_scan
+
