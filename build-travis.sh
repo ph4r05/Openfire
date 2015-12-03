@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $TRAVIS_BRANCH == 'coverity_scan' ]]
+if [[ $TRAVIS_BRANCH == 'coverity_scan' ]]; then
   echo "Building for Coverity"
   /bin/rm -rf work/plugins-dev
   ant -f build/build.xml openfire plugins
