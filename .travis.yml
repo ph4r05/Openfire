@@ -1,8 +1,8 @@
 language: java
 script:
-  - /bin/rm -rf work/
+  - /bin/rm -rf work/plugins
   - /bin/rm -rf target/
-  - ant -f build/build.xml clean openfire test plugins
+  - ant -f build/build.xml openfire test plugins
 
 env:
   global:
