@@ -1,8 +1,5 @@
 language: java
-script:
-  - /bin/rm -rf work/plugins
-  - /bin/rm -rf target/
-  - ant -f build/build.xml openfire test plugins
+script: bash build-travis.sh
 
 env:
   global:
