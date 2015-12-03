@@ -1,5 +1,8 @@
 language: java
-script: ant -f build/build.xml openfire test plugins
+script:
+  - /bin/rm -rf work/
+  - /bin/rm -rf target/
+  - ant -f build/build.xml clean openfire test plugins
 
 env:
   global:
@@ -13,5 +16,6 @@ addons:
       name: "ph4r05/Openfire"
       description: "Build submitted via Travis CI"
     notification_email: ph4r05@gmail.com
-    build_command:   ant -f build/build.xml openfire test plugins
+    build_command_prepend: ant -f build/build.xml clean
+    build_command:   ant -f build/build.xml clean openfire test plugins
     branch_pattern: coverity_scan
