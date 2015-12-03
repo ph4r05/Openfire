@@ -17,5 +17,5 @@ addons:
       description: "Build submitted via Travis CI"
     notification_email: ph4r05@gmail.com
     build_command_prepend: ant -f build/build.xml clean
-    build_command:   ant -f build/build.xml clean openfire test plugins
+    build_command:   ant -f build/build.xml openfire plugins
     branch_pattern: coverity_scan
