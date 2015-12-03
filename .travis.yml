@@ -1,2 +1,17 @@
 language: java
 script: ant -f build/build.xml openfire test plugins
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "Iq81+8Qeh2jUawwC59Qi5KjoHVhRIQSsNOa+68lKFE1oze61/eBpjFBENIy/oiGZdC+zR8EC6t0P8nrRL8Z3f7gvG1sx511oO5Aazhzf+CgB1PWOI9IHjuLTBwOy9XIKHLvqNlSTW3BuaMz0iVbGMJwZ3IyZXxZAZK3KLb/hGmHuUwGUXO3h+3zpGYaHS/2Yg7IKrIUcHH7Tn3rDrIVt/8mshjj9UCe2+a5sjRHWxV2PKLxoexGboTMVtSQajYAS0VgZy4OKMd2hphx4v/B7VCmUUa+htvywuASUOyKGSDFRi6hG28rbMtvfV6h65wjizkpKqBjP9YHMKE3Q5MigDDzp2owzQJsZ1QjYOHn2r7G0wkEp4UWIMomF8+xTYAyKku1byNT4xqfQBGtEAvAkrt6vF1asb63FIRPiV+KX/rMZg2XdX6kr8d5KivAWUeKeJFGTXzqGCm/79djBbfM2BrhHP3D1yuDUEIVNFgChgr6tHfUOUyJ9dr784gb+bAEmaYHufSaJdtDXlNLIPmCE49vP+gHeOy2L8pFcy/maZHHAk4L7ilQac7HSvjuGJdA+iKj40e4ZGHI72iUayDZRdAm3xiDvrqphfI3o1ySBbRfF2Q/QfmaY9GUhO7Hb2fmaM7i3Yp+tSbQeRUAxFVpE2mFO+sy/YbAbP17ZIs0fPQA="
+
+addons:
+  coverity_scan:
+    project:
+      name: "ph4r05/Openfire"
+      description: "Build submitted via Travis CI"
+    notification_email: ph4r05@gmail.com
+    build_command:   ant -f build/build.xml openfire test plugins
+    branch_pattern: coverity_scan
