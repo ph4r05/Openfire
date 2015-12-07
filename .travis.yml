@@ -1,5 +1,6 @@
 language: java
 script: bash build-travis.sh
+sudo: false
 
 env:
   global:
@@ -13,9 +14,9 @@ addons:
       name: "ph4r05/Openfire"
       description: "Build submitted via Travis CI"
     notification_email: ph4r05@gmail.com
-    build_command_prepend: ant -f build/build.xml clean
     build_command: bash ./build-coverity.sh 
     branch_pattern: coverity_scan
 
+# build_command_prepend: ant -f build/build.xml clean
 # build_command:   ant -f build/build.xml openfire plugins
 

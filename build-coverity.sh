@@ -10,7 +10,7 @@ echo "Build done, switching directory to $DIR"
 cd "$DIR"
 
 echo "Cov log"
-cat cov-int/build-log.txt 
+tail -n 1000 cov-int/build-log.txt 
 
 echo "DONE"
 
